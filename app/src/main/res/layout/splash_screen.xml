@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="loctall.com.childtracking.SplashActivity"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/fab"
+        android:layout_width="200.00dp"
+        android:layout_height="200.00dp"
+        android:layout_marginLeft="200.00dp"
+        android:layout_marginStart="200.00dp"
+        android:layout_marginTop="272.00dp"
+
+        >
+
+        <ImageView
+            android:layout_width="72.00dp"
+            android:layout_height="72.00dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_launcher_background" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55.00dp"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10.00dp"
+            android:layout_marginStart="10.00dp"
+            android:clickable="false"
+            android:fontFamily="Enable Google play Services"
+            android:textStyle="bold"
+            android:paddingTop="18.40dp"
+            android:text="L O C T A L L"
+            android:textColor="@android:color/black"
+            android:textSize="42.50dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55.00dp"
+        android:layout_marginTop="78.00dp"
+        >
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="108.00dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:progressTint="?android:attr/colorPrimary"
+        tools:targetApi="lollipop"
+
+        />
+
+</LinearLayout>

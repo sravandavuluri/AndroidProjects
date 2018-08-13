@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/appbar_padding_top"
+                >
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DashBoard"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:layout_marginLeft="66.00dp"
+                            android:layout_marginStart="66.00dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/settitle"/>
+
+
+                        <ImageView
+                            android:layout_width="100.00dp"
+                            android:layout_height="27.50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/person_icon"
+                            android:onClick="Profile"
+                            android:id="@+id/profile_image"/>
+
+                        <ImageView
+                            android:layout_width="100.00dp"
+                            android:layout_height="27.50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/save"
+                            android:visibility="invisible"
+                            android:id="@+id/save_route_image"/>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+
+            </android.support.design.widget.AppBarLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/attended_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="283dp"
+                android:layout_marginEnd="10.00dp"
+                android:layout_marginLeft="10.00dp"
+                android:layout_marginRight="10.00dp"
+                android:layout_marginStart="10.00dp"
+                android:layout_marginTop="72.00dp">
+
+                <RelativeLayout
+                    android:id="@+id/add_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="100.00dp"
+                    android:background="@drawable/curvededgeshape_grey">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="27.50dp"
+                        android:layout_marginLeft="10.00dp"
+                        android:layout_marginStart="10.00dp"
+                        android:maxLines="1"
+                        android:paddingTop="18.40dp"
+                        android:text="Number Of Students Attended Today"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="239dp"
+                    android:layout_marginEnd="2.60dp"
+                    android:layout_marginRight="2.60dp"
+                    android:layout_marginTop="55.00dp"
+                    android:background="@drawable/border_all_sides_grey">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pichart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true">
+
+                    </com.github.mikephil.charting.charts.PieChart>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/attended_sheet"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+
+
+                    <RelativeLayout
+                        android:layout_marginTop="17.00dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="84.00dp"
+                        android:layout_marginLeft="37.50dp"
+                        android:layout_marginStart="37.50dp"
+                        android:layout_marginEnd="37.50dp"
+                        android:layout_marginRight="37.50dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="27.50dp"
+                            android:layout_height="20.00dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2.60dp"
+                            android:layout_marginRight="2.60dp"
+                            android:id="@+id/check_details"
+                            />
+
+
+                        <TextView
+                            android:layout_width="200.00dp"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@android:color/black"
+                            android:text="Show Details"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="100.00dp"
+                            android:layout_marginRight="100.00dp"
+                            />
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_marginTop="100.00dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="84.00dp"
+                        android:layout_marginLeft="37.50dp"
+                        android:layout_marginStart="37.50dp"
+                        android:layout_marginEnd="37.50dp"
+                        android:layout_marginRight="37.50dp"
+                        android:id="@+id/relative"
+                        android:background="@drawable/curvededgeshape"
+                        android:visibility="invisible"
+                        >
+
+                        <TextView
+                            android:layout_width="17.00dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10.00dp"
+                            android:layout_marginRight="10.00dp"
+                            android:background="#D81B60"
+                            />
+
+
+
+
+                        <TextView
+                            android:layout_width="200.00dp"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@android:color/white"
+                            android:text="FleetX1XXX"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20.00dp"
+                            android:layout_marginRight="20.00dp"
+                            android:id="@+id/student_name"
+                            />
+
+
+                        <TextView
+                            android:layout_toRightOf="@id/student_name"
+                            android:layout_toEndOf="@id/student_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@android:color/white"
+                            android:text="50"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10.00dp"
+                            android:layout_marginRight="10.00dp"
+                            />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="84.00dp"
+                        android:layout_below="@id/relative"
+                        android:layout_marginLeft="37.50dp"
+                        android:layout_marginStart="37.50dp"
+                        android:layout_marginEnd="37.50dp"
+                        android:layout_marginRight="37.50dp"
+                        android:layout_marginTop="3.40dp"
+                        android:background="@drawable/curvededgeshape"
+                        android:id="@+id/relative1"
+                        android:visibility="invisible"
+                        >
+
+                        <TextView
+                            android:layout_width="17.00dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10.00dp"
+                            android:layout_marginRight="10.00dp"
+                            android:background="#FFA000"
+                            />
+
+
+                        <TextView
+                            android:layout_width="200.00dp"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@android:color/white"
+                            android:text="FleetX12XX"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20.00dp"
+                            android:layout_marginRight="20.00dp"
+                            android:id="@+id/firststudent_name"
+                            />
+
+
+                        <TextView
+                            android:layout_toRightOf="@id/firststudent_name"
+                            android:layout_toEndOf="@id/firststudent_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@android:color/white"
+                            android:text="40"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10.00dp"
+                            android:layout_marginRight="10.00dp"
+                            android:visibility="invisible"
+                            />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="84.00dp"
+                        android:layout_below="@id/relative1"
+                        android:layout_marginLeft="37.50dp"
+                        android:layout_marginStart="37.50dp"
+                        android:layout_marginEnd="37.50dp"
+                        android:layout_marginRight="37.50dp"
+                        android:layout_marginTop="3.40dp"
+                        android:background="@drawable/curvededgeshape"
+                        android:id="@+id/relative2"
+                        android:visibility="invisible"
+                        >
+
+
+                        <TextView
+                            android:layout_width="17.00dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10.00dp"
+                            android:layout_marginRight="10.00dp"
+                            android:background="#FFFF00"
+                            />
+
+                        <TextView
+                            android:layout_width="200.00dp"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@android:color/white"
+                            android:text="FleetX123X"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20.00dp"
+                            android:layout_marginRight="20.00dp"
+                            android:id="@+id/secondstudent_name"
+                            />
+
+
+                        <TextView
+                            android:layout_toRightOf="@id/secondstudent_name"
+                            android:layout_toEndOf="@id/secondstudent_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@android:color/white"
+                            android:text="15"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10.00dp"
+                            android:layout_marginRight="10.00dp"
+                            />
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="84.00dp"
+                        android:layout_below="@id/relative2"
+                        android:layout_marginLeft="37.50dp"
+                        android:layout_marginStart="37.50dp"
+                        android:layout_marginEnd="37.50dp"
+                        android:layout_marginRight="37.50dp"
+                        android:layout_marginTop="3.40dp"
+                        android:background="@drawable/curvededgeshape"
+                        android:id="@+id/relative3"
+                        android:visibility="invisible"
+                        >
+
+
+                        <TextView
+                            android:layout_width="17.00dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10.00dp"
+                            android:layout_marginRight="10.00dp"
+                            android:background="#00C853"
+                            />
+
+
+                        <TextView
+                            android:layout_width="200.00dp"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@android:color/white"
+                            android:text="FleetX1234"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20.00dp"
+                            android:layout_marginRight="20.00dp"
+                            android:id="@+id/thirdstudent_name"
+                            />
+
+
+                        <TextView
+                            android:layout_toRightOf="@id/thirdstudent_name"
+                            android:layout_toEndOf="@id/thirdstudent_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@android:color/white"
+                            android:text="10"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10.00dp"
+                            android:layout_marginRight="10.00dp"
+                            />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

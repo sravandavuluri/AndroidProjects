@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_registerstudent"
+            android:title="Register a Student" />
+
+        <item
+            android:id="@+id/nav_add_fleet"
+            android:title="Add Fleet" />
+
+        <item
+            android:id="@+id/nav_driver"
+            android:title="Add Driver" />
+
+        <!--<item-->
+            <!--android:id="@+id/nav_studentslist"-->
+            <!--android:title="Student List" />-->
+
+        <item
+            android:id="@+id/nav_route"
+            android:title="Add a Route" />
+
+        <item
+            android:id="@+id/nav_manage_route"
+            android:title="Manage Route" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Settings" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
+
+    </group>
+
+
+</menu>
